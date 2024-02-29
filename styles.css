@@ -13,7 +13,9 @@ body{
     display: flex;
     background-color: hsl(0 0% 85%);
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+
 }
 @font-face {
     font-family: myCoolFont;
@@ -34,9 +36,9 @@ body{
     flex-direction: column;
     justify-content: space-around;
     box-shadow: 10px 5px  20px 0.1px grey;
+
 }
 .inputs{
-    /* border:  2px black solid; */
     padding: 3px;
     width: 80%;
     height: 20%;
@@ -44,9 +46,7 @@ body{
 
 }
 .inputs ul{
-    /* border: 2px red solid; */
     width: 30%;
-    /* gap: 5px; */
     display: flex;
     flex-direction: column;
 }
@@ -67,22 +67,15 @@ input{
 }
 .button-hyper{
     display: flex;
-    /* border:  2px red solid; */
     height: 20%;
     align-items: center;
-    /* justify-content: space-around; */
     width: 100%;
-    /* gap: 2px; */
 }
 .hyper{
-    /* border:  2px red solid; */
-    width: 75%;
+    width: 50%;
     align-self: center;
-    /* height: 100%; */
 }
 button{
-    /* width:10%; */
-    /* height: 80%; */
     border-radius: 50%;
     background-color: blueviolet;
     padding: 5px;
@@ -90,15 +83,12 @@ button{
 }
 button:hover{
     background-color:rgb(9, 8, 9) ;
-
 }
 image{
     width: 60%;
     height: 60%;
 }
 .converted{
-
-    /* border:  2px black solid; */
     width: 80%;
     height: 45%;
     display: flex;
@@ -106,15 +96,128 @@ image{
     justify-content: center;
     font-size: 3.1em;font-family: extraBold;
     padding-left: 30px;
-
-
-
 }
 .converted span{
-    /* border:  2px red solid; */
     color: blueviolet;
 }
+
 li{
 list-style: none;
 
+}
+
+.attribution{
+    width: 80%;
+    /* border:  2px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+}
+
+@media screen and (max-width:620px) {
+    .container{
+        width: 95%;
+        height: 60%;
+    }
+
+    .converted{
+        width: 80%;
+        height: 45%;
+        font-size: 2em;
+    }
+    .button-hyper{
+        display: flex;
+        width: 100%;
+    }
+    .hyper{
+        width: 50%;
+    }
+    
+    .inputs ul{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+    }
+    .hyper2{
+        width: 50%;
+    }
+    input{
+        width: 90%;
+        height: 50%;
+        padding: 5px;
+        font-size: 1rem;
+    }
+    .inputs{
+        padding: 3px;
+        width: 100%;
+        height: 25%;
+    }
+    .inputs span{
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
+        
+    }
+    .attribution{
+        font-size: 1.0rem;
+    }
+}
+
+    @media screen and (max-width:300px) {
+        .container{
+            width: 95%;
+            height: 50%;
+               margin-top: 100px;
+        }
+        body{
+        align-items: inherit;
+        }
+        .converted{
+            
+            border:  2px black solid;
+            width: 80%;
+            height: 45%;
+            font-size: 1.1em;
+        }
+        .button-hyper{
+            display: flex;
+            width: 90%;
+        }
+        .inputs ul{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+        .hyper2{
+            width: 50%;
+        }
+        input{
+            width: 90%;
+            height: 50%;
+            font-size: 0.7rem;
+        }
+        .inputs{
+            width: 100%;
+            height: 25%;
+        }
+        .inputs span{
+            font-size: 0.6em;
+            
+        }
+        .attribution{
+            font-size: 0.6rem;
+        }
+        
+
+
+}
+@media screen and (min-width : 300px  ) and (max-width : 450px  ) {
+    .attribution{
+        font-size: 0.7em;
+    }
+}
+@media screen and (min-width : 620px  ) and (max-width : 700px  ) {
+    .attribution{
+        font-size: 0.9em;
+    }
 }
